@@ -13,7 +13,7 @@ export interface IProfileResponse {
 class UserService {
 	private BASE_URL = '/user/profile'
 	async getProfile() {
-		const response = await axiosWithAuth.get<IAuthResponse>(this.BASE_URL)
+		const response = await axiosWithAuth.get<IProfileResponse>(this.BASE_URL)
 		return response.data
 	}
 
