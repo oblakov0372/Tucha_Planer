@@ -1,0 +1,16 @@
+import type { Metadata } from 'next'
+
+import { Auth } from './Auth'
+
+export const metadata: Metadata = {
+	title: 'Auth',
+	description: ''
+}
+
+export default function AuthPage() {
+	return (
+		<div>
+			<Auth />
+		</div>
+	)
+}
