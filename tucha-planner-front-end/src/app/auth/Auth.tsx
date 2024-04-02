@@ -29,7 +29,9 @@ export function Auth({}) {
 		mutationFn: (data: IAuthForm) =>
 			authService.main(isLoginForm ? 'login' : 'register', data),
 		onSuccess() {
-			toast.success('Succefully login!')
+			isLoginForm
+				? toast.success('Succefully login!')
+				: toast.success('Succefully registered!')
 			reset()
 			push(DASHBOARD_PAGES.HOME)
 		}

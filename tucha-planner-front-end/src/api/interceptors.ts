@@ -34,7 +34,7 @@ axiosWithAuth.interceptors.response.use(
 	async error => {
 		const originalRequest = error.config
 		if (
-			(error?.response?.staus === 1 ||
+			(error?.response?.status === 1 ||
 				errorCatch(error) === 'jwt expired' ||
 				errorCatch(error) === 'jwt must be provide ') &&
 			error.config &&
