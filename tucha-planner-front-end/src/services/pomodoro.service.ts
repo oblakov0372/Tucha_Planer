@@ -41,3 +41,5 @@ class PomodoroService {
 		return response
 	}
 }
+
+export const pomodoroService = new PomodoroService()
