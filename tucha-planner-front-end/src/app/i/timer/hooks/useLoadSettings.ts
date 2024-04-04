@@ -4,7 +4,7 @@ export function useLoadSettings() {
 	const { data } = useProfile()
 
 	const workInterval = data?.user.workInterval ?? 50
-	const breaInterval = data?.user.workInterval ?? 10
+	const breakInterval = data?.user.workInterval ?? 10
 
-	return { workInterval, breaInterval }
+	return { workInterval, breakInterval }
 }

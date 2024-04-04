@@ -1,4 +1,5 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query'
+import { toast } from 'sonner'
 
 import { TypeTaskFormState } from '@/types/task.types'
 
@@ -15,6 +16,7 @@ export function useUpdateTask(key?: string) {
 			queryClient.invalidateQueries({
 				queryKey: ['tasks']
 			})
+			toast.success('Successfuly updated Task')
 		}
 	})
 	return { updateTask }

@@ -18,7 +18,7 @@ export function DashboardSidebar() {
 						color={COLORS.primary}
 						size={38}
 					/>
-					<span className='text-2xl font-bold relative'>TUCHA Planer</span>
+					<span className='text-2xl font-bold relative'>TUCHA Planner</span>
 				</Link>
 				<div className='p-3 relative'>
 					{MENU.map(item => (

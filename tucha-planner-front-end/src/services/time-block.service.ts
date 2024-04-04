@@ -8,7 +8,7 @@ import { axiosWithAuth } from '@/api/interceptors'
 class TimeBlockService {
 	private BASE_URL = '/user/time-blocks'
 
-	async getTimesBlocks() {
+	async getTimeBlocks() {
 		const response = await axiosWithAuth.get<ITimeBlockResponse[]>(
 			this.BASE_URL
 		)
@@ -30,7 +30,7 @@ class TimeBlockService {
 		return response
 	}
 
-	async updateOrderTImeBlock(ids: string[]) {
+	async updateOrderTimeBlock(ids: string[]) {
 		const response = await axiosWithAuth.put(`${this.BASE_URL}/update-order`, {
 			ids
 		})

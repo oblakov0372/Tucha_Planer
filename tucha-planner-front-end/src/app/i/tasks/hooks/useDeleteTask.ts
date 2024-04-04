@@ -1,4 +1,5 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query'
+import { toast } from 'sonner'
 
 import { taskService } from '@/services/task.service'
 
@@ -12,6 +13,7 @@ export function useDeleteTask() {
 			queryClient.invalidateQueries({
 				queryKey: ['tasks']
 			})
+			toast.success('Successfuly deleted Task')
 		}
 	})
 	return { deleteTask, isDeletePending }
